@@ -1,301 +1,122 @@
-// if - else if - else
+// slice - X ve Y karakterleri
 
-
-
-/* function adminMi(rol) {
-    if (rol === "admin") {
-        return "evet";
-    }else {
-        return "hayir";
-    }
+/* function tcGizle(tcKimlik) {
+  const gizlenmisTC = `${tcKimlik.slice(0,2)}****${tcKimlik.slice(6)}`;
+  return gizlenmisTC;
 }
 
-console.log(adminMi("admin")) */
+console.log(tcGizle("123456789")) */
 
+// includes
+/* const isim = "Aziz Kaymaz fare";
+console.log(isim.includes("Fare")) */
 
+// startsWith - endsWtih
+/* const isim = "Aziz Kaymaz fare";
+console.log(isim.endsWith("e")) */
 
-// kısa if - ternary - üçlü if
+/*function tcKontrol(tcKimlik) {
+  let sonuc = "";
 
-// koşul ? true : false
+  if(tcKimlik.startsWith("1")) {
+    sonuc = "TC Kimlik 1 ile başlıyor";
+  }else if(tcKimlik.startsWith("2")) {
+    sonuc = "TC Kimlik 2 ile başlıyor";
+  }else {
+    sonuc = "Geçersiz TC Kimlik No";
+  }
 
-/* if (koşul) {
-    true
-}else {
-    else
-} */
+  return sonuc;
 
-/* sfunction adminMi(rol) {
-    if (checked === "check") {
-        return veritabanınaKaydet() 
-    }else {
-        return sozlesmeOnaylanmadi()
-    }
 }
 
+console.log(tcKontrol("326351273")) */
 
+// indexOf
+// değeri bulursa index sayısını veriyor
+// bulamazsa -1 değeri dönüyor
+/*const dosyaIsmim = "index.css";
 
-adminMi("user") ? console.log("Admin") : console.log("User"); */
+console.log(dosyaIsmim.indexOf(".css"))
+console.log(dosyaIsmim.includes(".css"))
+console.log(dosyaIsmim.slice(dosyaIsmim.indexOf(".css"))) */
 
+// trim
+/* const isim = "   Aziz Kaymaz asasdasd asdhasdhjagfsd   ";
+console.log(isim.trim());
+console.log(isim) */
 
+/*let link = "https://my-site.com/about";
+if (link.includes("my-site") && !link.endsWith("/")) {
+  link += "/";
+}
+console.log(link); */
 
+/* const blacklistedWord1 = "spam";
+const blacklistedWord2 = "sale";
 
-// scope
+const string1 =
+  "Hello, I'm Prince Abdul, this is not spam, I'm offering you a million!";
+const string2 = "Biggest SALE this week, don't miss out!";
+const string3 = "#fatlivesmatter advertising campaign";
 
-/* const isim = "aziz";
-let sonuc = "";
+console.log(string1.includes(blacklistedWord1));
+console.log(string1.includes(blacklistedWord2));
 
-if(isim === "aziz") {
-    const herhangi = "asdas";
-    sonuc = "evet"
-}else {
-    sonuc = "hayır"
+console.log(string2.includes(blacklistedWord1));
+
+const normalizedString2 = string2.toLowerCase();
+console.log(normalizedString2.includes(blacklistedWord2));
+
+console.log(string3.includes(blacklistedWord1));
+console.log(string3.includes(blacklistedWord2)); */
+
+// while döngüsü
+/* function dosyaYukle(dosyam) {
+  let yuklemeYuzdesi = 0;
+  console.log("Dosya Yükleme Başlatıldı");
+  while(yuklemeYuzdesi <= 100) {
+    console.log("%" + yuklemeYuzdesi + " yükleniyor..");
+    yuklemeYuzdesi++;
+  }
+  console.log(dosyam + " Dosyası Yükleme Başarılı");
 }
 
-console.log(sonuc) */
+dosyaYukle("denem.pdf"); */
 
-/**
- * Şubelendirme
+// do while
+/*let sayi = 200;
+do {
+  console.log("Merhaba" + sayi)
+  sayi++;
+} while(sayi <= 100) */
 
- * - If ifadesi
- * - If...else ifadesi
- * - Blok else...if
- * - Üçlü operatör
- */
-
-/* console.log("Before");
-
-if (5 > 30) {
-  console.log("x > y");
-} else {
-  console.log("x < y");
-}
-
-console.log("After");
-
-const points = 5000;
-
-if (points <= 500) {
-  console.log("Level 1");
-} else if (points > 500) {
-  console.log("Level 2");
-} else if (points > 1500) {
-  console.log("Level 3");
-} else {
-  console.log("Level 4");
-}
-
-const balance = 1000;
-const message = balance >= 0 ? "Positive" : "Negative";
-console.log(message); */
-
+// for
 /*
- * Değişkenlerin Blok Kapsamı
- */
 
-/* const c = 15;
+initialization = başlatmak
+condition = koşul
+post-expression = sonraki kısım
 
-if (true) {
-    const a = 5;
-    console.log(a);
-    console.log(c);
+*/
+
+/*const meyveler = "elma, armut, karpuz"
+
+for(let i = 0; i <= meyveler.length; i++) {
+  console.log("merhaba" + i)
+} */
+
+// contiune - devamını yazma döngüyü baştan başlat
+// break - tamam bitti döngüyü bitir
+
+const baslangic = 0;
+const bitis = 50;
+
+for (let i = baslangic; i <= bitis; i += 1) {
+  if (i % 2 === 0) {
+    console.log("Çift: ", i);
+    continue;
+  }
+
+  console.log("Tek: ", i);
 }
-
-if (true) {
-  const b = 10;
-  console.log(b);
-  console.log(c);
-}
-
-console.log(c); */
-
-/**
- * Tarayıcı konsolunda saat ve dakikaları şu şekilde görüntülemek için bir komut dosyası yazın
- * "14 saat 26 dakika" biçiminde bir satır. Minutes değişkeninin değeri 0 ise,
- * sonra dakikalar olmadan "14 saat" dizesini yazdırır.
- */
-
-/* const hours = 14;
-const minutes = 10;
-// let timestring;
-
-/* if (minutes > 0) {
-  timestring = `${hours} saat. ${minutes} dk.`;
-} else {
-  timestring = `${hours} saat.`;
-} */
-
-/* const timestring = minutes > 0 ? `${hours} saat. ${minutes} dk.` : `${hours} saat.`
-
-console.log(timestring); */
-
-/**
- * Projenin son teslim tarihini görüntülemek için bir kod yazın. if...else kullanın.
- *
- * Son teslim tarihine 0 gün kalmışsa, "Today" satırını yazdırın
- * Son teslim tarihine 1 gün kalmışsa, "Tomorrow" satırını yazdırın
- * Son teslim tarihine 2 gün kalmışsa, "Overmorrow" satırını yazdırın
- * Son teslim tarihine 3+ gün kalmışsa, "Date in the future" satırını yazdırın
- */
-
-/*const daysUntilDeadline = 0;
-
-if (daysUntilDeadline === 0) {
-  console.log("Today");
-} else if (daysUntilDeadline === 1) {
-  console.log("Tomorrow");
-} else if (daysUntilDeadline === 2) {
-  console.log("Overmorrow");
-} else {
-  console.log("Date in the future");
-} */
-
-
-// switch - case
-
-/* const gun = 3;
-
-switch (gun) {
-    case 1:
-        console.log("Pazartesi");
-        break;
-
-    case 2:
-        console.log("Salı");
-        break;
-    
-    default:
-        console.log("Gün yok")
-        break;
-} */
-
-/**
- * Switch operatörü
- */
-
-/* const username = "Polyssadas";
-
-switch (username) {
-  case "Mango":
-    console.log("case 1");
-    break;
-  case "Poly":
-    console.log("case 2");
-    break;
-  default:
-    console.log("Default case");
-} */
-
-/**
- * Switch kullanarak görev kodunu yeniden düzenleyin.
- *
- * Son teslim tarihine 0 gün kalmışsa, "Today" satırını yazdırın
- * Son teslim tarihine 1 gün kalmışsa, "Tomorrow" satırını yazdırın
- * Son teslim tarihine 2 gün kalmışsa, "Overmorrow" satırını yazdırın
- * Son teslim tarihine 3+ gün kalmışsa, "Date in the future" satırını yazdırın
- */
-
-// const daysUntilDeadline = 0;
-
-/* if (daysUntilDeadline === 0) {
-  console.log("Today");
-} else if (daysUntilDeadline === 1) {
-  console.log("Tomorrow");
-} else if (daysUntilDeadline === 2) {
-  console.log("Overmorrow");
-} else {
-  console.log("Date in the future");
-} */
-
-/* switch(daysUntilDeadline) {
-    case 0:
-        console.log("Today");
-        break;
-    default:
-        console.log("Date in the future"); 
-}*/
-
-
-/* const option = 1526;
-let message = "";
-
-switch (option) {
-  case 1:
-    message = "Ürünleri yarın saat 12:00'den itibaren ofisimizden teslim alabileceksiniz";
-    break;
-
-  case 2:
-    message = "Kurye siparişi yarın 9:00 - 18:00 saatleri arasında teslim edecek";
-    break;
-
-  case 3:
-    message = "Paket bugün gönderilecek";
-    break;
-
-  default:
-    message = "Bir yönetici sizi geri arayacak";
-}
-
-console.log(message); */
-
-
-
-
-// Mantıksal Operatörler
-// ve && --kessin sonuç olamlı hepsi // true - true dışında false
-// veya || -- herhangi bir koşul true olması yeterli // false - false dışında true döner
-// ! olumsuz hali
-
-/* const username = "azizkaymaz";
-const password = "123123"
-
-let isLogin = "";
-
-
-if(username === "azizkaymazz" || password === "123123") {
-    isLogin = "Kullanıcı Doğru";
-}else {
-    isLogin = "Kullanıcı Yanlış"
-}
-
-console.log(isLogin) */
-
-// ve oeratöründe false görene işlem devam eder
-// console.log("Ahmet" && "Mehmet" && 0 && "Aziz" && 20)
-
-// veya operatörü ilk yakaladığı true değerini basar
-// or yada || veya
-// console.log(0 || "Aziz" || "Mehmet" && null)
-
-// ve false görene kadar
-// veya true görene kadar 
-
-// number 0
-// boolean false
-// string ""
-// null
-// undefined
-// NaN
-
-
-
-/**
- * Mantıksal operatörler
- *
- * - Tip dönüştürme: mantıksal
- * - && operatörü
- * - Operatör ||
- * - Operatör !
- */
-
-console.log(Boolean(true)); // true
-console.log(Boolean(false)); // false
-console.log(Boolean(NaN)); // false
-console.log(Boolean(null)); // false
-console.log(Boolean(undefined)); // false
-console.log(Boolean(0)); // false
-console.log(Boolean(3.14)); // true
-console.log(Boolean(-10)); // true
-console.log(Boolean("")); // false
-console.log(Boolean("hello")); // true
-console.log(Boolean("false")); // true
-
