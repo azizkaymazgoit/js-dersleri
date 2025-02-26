@@ -1,122 +1,189 @@
-// slice - X ve Y karakterleri
+// diziler
 
-/* function tcGizle(tcKimlik) {
-  const gizlenmisTC = `${tcKimlik.slice(0,2)}****${tcKimlik.slice(6)}`;
-  return gizlenmisTC;
+
+/* const isim = "Aziz";
+const soyisim = "Kaymaz";
+
+
+const dersler = ["HTML", "CSS", "JavaScript", "React"];
+
+const ilkEleman = dersler[0];
+const sonEleman = dersler[dersler.length - 1]
+
+console.log(dersler) */
+
+
+
+/* let isim1 = "Aziz";
+let isim2 = isim1;
+isim2 = "Mehmet"
+// console.log(isim1 + " " + isim2)
+
+// referans değer
+const dizi1 = ["ahmet", "mehmet", "can"]
+const dizi2 = dizi1
+
+dizi2[0] = "ömer"
+
+console.log(dizi1)
+console.log(dizi2) */
+
+
+// karşılaştırma false
+/*const dizi1 = ["ahmet"]
+const dizi2 = ["ahmet"] */
+
+
+// Boolean dönüş değeri
+/* const dataArray = []
+
+if(dataArray.length > 0) {
+  console.log("true")
+}else {
+  console.log("false")
 }
 
-console.log(tcGizle("123456789")) */
+console.log(Boolean(dizi1)) */
 
-// includes
-/* const isim = "Aziz Kaymaz fare";
-console.log(isim.includes("Fare")) */
+/* const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+console.table(courses);
+console.log([0]);
+console.log([1]);
+console.log([2]);
+console.log([3]);
 
-// startsWith - endsWtih
-/* const isim = "Aziz Kaymaz fare";
-console.log(isim.endsWith("e")) */
+courses[1] = "Node.js";
+courses[3] = "Next.js";
+console.table(courses);
 
-/*function tcKontrol(tcKimlik) {
-  let sonuc = "";
+console.log(courses.length);
 
-  if(tcKimlik.startsWith("1")) {
-    sonuc = "TC Kimlik 1 ile başlıyor";
-  }else if(tcKimlik.startsWith("2")) {
-    sonuc = "TC Kimlik 2 ile başlıyor";
-  }else {
-    sonuc = "Geçersiz TC Kimlik No";
-  }
+const lastIndex = courses.length - 1;
+console.log(lastIndex); */
 
-  return sonuc;
+/* const a = [1, 2, 3];
+const b = a;
 
-}
 
-console.log(tcKontrol("326351273")) */
+console.log(a === b); // ?
 
+console.log([] === []);
+console.log([1, 2, 3] === [1, 2, 3]); */
+
+
+// dizi metodları
+
+// join 
+// split
+// slice
+// concat
 // indexOf
-// değeri bulursa index sayısını veriyor
-// bulamazsa -1 değeri dönüyor
-/*const dosyaIsmim = "index.css";
+// includes
 
-console.log(dosyaIsmim.indexOf(".css"))
-console.log(dosyaIsmim.includes(".css"))
-console.log(dosyaIsmim.slice(dosyaIsmim.indexOf(".css"))) */
+// pop - push // son
+// shift - unshift // baş
 
-// trim
-/* const isim = "   Aziz Kaymaz asasdasd asdhasdhjagfsd   ";
-console.log(isim.trim());
-console.log(isim) */
+// push - unshift // ekleme
+// pop - shift // çıkarma
 
-/*let link = "https://my-site.com/about";
-if (link.includes("my-site") && !link.endsWith("/")) {
-  link += "/";
-}
-console.log(link); */
 
-/* const blacklistedWord1 = "spam";
-const blacklistedWord2 = "sale";
+// const kurslar = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+// const yeniKurslar = ["C++", "C#", "NextJS"]
+// const sayilar = [1,2,3]
 
-const string1 =
-  "Hello, I'm Prince Abdul, this is not spam, I'm offering you a million!";
-const string2 = "Biggest SALE this week, don't miss out!";
-const string3 = "#fatlivesmatter advertising campaign";
+// const yeniDeger = etiketler.join();
+// const degerim = "HTML,CSS,JavaScript,React,PostgreSQL,assda-asdas"
+/* console.log(etiketler.slice())
+console.log(etiketler.slice(2))
+console.log(etiketler.slice(2, 4)) */
 
-console.log(string1.includes(blacklistedWord1));
-console.log(string1.includes(blacklistedWord2));
+// const yeniDizi = kurslar.concat(yeniKurslar, sayilar);
 
-console.log(string2.includes(blacklistedWord1));
+// kurslar.push("C++")
+// const deger = kurslar.pop()
 
-const normalizedString2 = string2.toLowerCase();
-console.log(normalizedString2.includes(blacklistedWord2));
+// kurslar.shift()
 
-console.log(string3.includes(blacklistedWord1));
-console.log(string3.includes(blacklistedWord2)); */
+// console.log(kurslar)
 
-// while döngüsü
-/* function dosyaYukle(dosyam) {
-  let yuklemeYuzdesi = 0;
-  console.log("Dosya Yükleme Başlatıldı");
-  while(yuklemeYuzdesi <= 100) {
-    console.log("%" + yuklemeYuzdesi + " yükleniyor..");
-    yuklemeYuzdesi++;
-  }
-  console.log(dosyam + " Dosyası Yükleme Başarılı");
-}
 
-dosyaYukle("denem.pdf"); */
+// diziler - döngüler
+// const kurslar = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
 
-// do while
-/*let sayi = 200;
-do {
-  console.log("Merhaba" + sayi)
-  sayi++;
-} while(sayi <= 100) */
-
-// for
-/*
-
-initialization = başlatmak
-condition = koşul
-post-expression = sonraki kısım
-
-*/
-
-/*const meyveler = "elma, armut, karpuz"
-
-for(let i = 0; i <= meyveler.length; i++) {
-  console.log("merhaba" + i)
+/* for(let i = 0; i < kurslar.length; i++) {
+  console.log((i + 1) + " " + kurslar[i].toUpperCase())
 } */
 
-// contiune - devamını yazma döngüyü baştan başlat
-// break - tamam bitti döngüyü bitir
 
-const baslangic = 0;
-const bitis = 50;
+// for...of
+/* for(let degerimYXAsdasd of kurslar) {
+  console.log(degerimYXAsdasd)
+} */
 
-for (let i = baslangic; i <= bitis; i += 1) {
-  if (i % 2 === 0) {
-    console.log("Çift: ", i);
-    continue;
-  }
+  /* const friends = ["Mango", "Kiwi", "Poly", "Ajax"];
+  
+  for (let friend of friends) {
+    console.log(friend);
+    // console.log(friends);
+  } */
 
-  console.log("Tek: ", i);
+    /**
+ * Bir dizideki tüm çift sayıların toplamını hesaplayan bir kod yazın.
+ */
+
+/* const numbers = [1, 2, 3, 4];
+let total = 0;
+
+for (const number of numbers) {
+  total += number;
 }
+
+console.log("Total: ", total); */
+
+/**
+ * Konsolda kullanıcının adını ve telefon numarasını görüntüleyen bir kod yazın.
+ * names ve phones değişkenleri virgülle ayrılmış isim ve telefon numarası dizelerini saklar. 
+ * Dizelerdeki adların ve telefon numaralarının sıra numarası bir eşleşmeyi gösterir.
+ * İsimlerin ve telefon numaralarının sayısının aynı olması garanti edilir.
+ */
+
+/*const names = "Jacob,William,Solomon,Artemis";
+const phones = "89001234567,89001112233,890055566377,890055566300";
+
+const yeniIsimler = names.split(",")
+const yeniNumaralar = phones.split(",")
+
+for(let i = 0; i < yeniIsimler.length; i++) {
+  console.log(`isim: ${yeniIsimler[i]} - ${yeniNumaralar[i]} nosuna sahip.`)
+}
+*/
+
+/**
+ * Bir dizenin ilk ve son sözcükleri hariç tüm sözcüklerini konsola yazdıran bir kod yazın. 
+ * Ortaya çıkan dize bir boşluk karakteriyle başlamamalı veya bitmemelidir.
+ * Komut dosyası herhangi bir dize için çalışmalıdır.
+ */
+
+/* const string = "Welcome to the future asas";
+
+const yeniDizi = string.split(" ");
+
+console.log(yeniDizi.slice(1, -1).join(" ")) */
+
+
+/**
+ * Bir dizideki en küçük sayıyı bulmak için bir kod yazın. 
+ * Kod herhangi bir sayı dizisi için çalışmalıdır. Problemi çözmek için bir döngü kullanın.
+ */
+
+/* const values = [20, 17, 94, 3, 23, 37];
+let min = values[0];
+
+for (let val of values) {
+  if (val < min) {
+    min = val;
+  }
+}
+
+console.log(min); */
+
