@@ -1,189 +1,144 @@
-// diziler
-
-
-/* const isim = "Aziz";
-const soyisim = "Kaymaz";
-
-
-const dersler = ["HTML", "CSS", "JavaScript", "React"];
-
-const ilkEleman = dersler[0];
-const sonEleman = dersler[dersler.length - 1]
-
-console.log(dersler) */
 
 
 
-/* let isim1 = "Aziz";
-let isim2 = isim1;
-isim2 = "Mehmet"
-// console.log(isim1 + " " + isim2)
+/* function deneme() {
 
-// referans değer
-const dizi1 = ["ahmet", "mehmet", "can"]
-const dizi2 = dizi1
+  // sözde dizi - arguments
+  // console.log(arguments)
 
-dizi2[0] = "ömer"
+  const data = Array.from(arguments)
 
-console.log(dizi1)
-console.log(dizi2) */
+  console.log(arguments)
+  console.log("----------------------")
+  console.log(data)
+
+  /* for(let aasdasdrf of data) {
+    console.log(aasdasdrf)
+  } 
+
+} */
+
+/* deneme("Aziz", "Kaymaz", 30, 123123, "asdasd", 123132, "asdasdasdasd") */
 
 
-// karşılaştırma false
-/*const dizi1 = ["ahmet"]
-const dizi2 = ["ahmet"] */
+/* function topla() {
 
+  const sayilar = Array.from(arguments);
+  let toplam = 0;
 
-// Boolean dönüş değeri
-/* const dataArray = []
+  for(let sayi of sayilar) {
+    toplam *= sayi
+  }
 
-if(dataArray.length > 0) {
-  console.log("true")
-}else {
-  console.log("false")
+  return toplam;
+ 
 }
 
-console.log(Boolean(dizi1)) */
-
-/* const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
-console.table(courses);
-console.log([0]);
-console.log([1]);
-console.log([2]);
-console.log([3]);
-
-courses[1] = "Node.js";
-courses[3] = "Next.js";
-console.table(courses);
-
-console.log(courses.length);
-
-const lastIndex = courses.length - 1;
-console.log(lastIndex); */
-
-/* const a = [1, 2, 3];
-const b = a;
+console.log(topla(1,2,3,4,5,6,7)) */
 
 
-console.log(a === b); // ?
+/*function enUzunKelime() {
 
-console.log([] === []);
-console.log([1, 2, 3] === [1, 2, 3]); */
+  const data = Array.from(arguments);
+  let ilkKelime = data[0];
 
+  for(let eleman of data) {
+    if(eleman.length > ilkKelime.length) {
+      ilkKelime = eleman
+    }
+  }
 
-// dizi metodları
+  return ilkKelime
 
-// join 
-// split
-// slice
-// concat
-// indexOf
-// includes
+}
 
-// pop - push // son
-// shift - unshift // baş
-
-// push - unshift // ekleme
-// pop - shift // çıkarma
+console.log(enUzunKelime("aaa", "bbbbbb", "ccc", "asjagsdljkagsld")) */
 
 
-// const kurslar = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
-// const yeniKurslar = ["C++", "C#", "NextJS"]
-// const sayilar = [1,2,3]
+// default parametre değeri
+/* function deneme(isim = "kullanıcı") {
+  console.log("Merhaba " + isim)
+}
 
-// const yeniDeger = etiketler.join();
-// const degerim = "HTML,CSS,JavaScript,React,PostgreSQL,assda-asdas"
-/* console.log(etiketler.slice())
-console.log(etiketler.slice(2))
-console.log(etiketler.slice(2, 4)) */
-
-// const yeniDizi = kurslar.concat(yeniKurslar, sayilar);
-
-// kurslar.push("C++")
-// const deger = kurslar.pop()
-
-// kurslar.shift()
-
-// console.log(kurslar)
+deneme("aziz"); */
 
 
-// diziler - döngüler
-// const kurslar = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+// hoisting
 
-/* for(let i = 0; i < kurslar.length; i++) {
-  console.log((i + 1) + " " + kurslar[i].toUpperCase())
+
+/* deneme()
+
+function deneme() {
+  console.log("merhaba")
 } */
 
 
-// for...of
-/* for(let degerimYXAsdasd of kurslar) {
-  console.log(degerimYXAsdasd)
-} */
-
-  /* const friends = ["Mango", "Kiwi", "Poly", "Ajax"];
-  
-  for (let friend of friends) {
-    console.log(friend);
-    // console.log(friends);
-  } */
-
-    /**
- * Bir dizideki tüm çift sayıların toplamını hesaplayan bir kod yazın.
- */
-
-/* const numbers = [1, 2, 3, 4];
-let total = 0;
-
-for (const number of numbers) {
-  total += number;
+/* const benimFonksiyonum = function() {
+  console.log("merhaba 2")
 }
 
-console.log("Total: ", total); */
+benimFonksiyonum() */
 
-/**
- * Konsolda kullanıcının adını ve telefon numarasını görüntüleyen bir kod yazın.
- * names ve phones değişkenleri virgülle ayrılmış isim ve telefon numarası dizelerini saklar. 
- * Dizelerdeki adların ve telefon numaralarının sıra numarası bir eşleşmeyi gösterir.
- * İsimlerin ve telefon numaralarının sayısının aynı olması garanti edilir.
- */
+/*const isim = "aziz";
 
-/*const names = "Jacob,William,Solomon,Artemis";
-const phones = "89001234567,89001112233,890055566377,890055566300";
+function fonk1() {
+  fonk1()
+  console.log("fonksiyon 1 başladı");
+}
 
-const yeniIsimler = names.split(",")
-const yeniNumaralar = phones.split(",")
-
-for(let i = 0; i < yeniIsimler.length; i++) {
-  console.log(`isim: ${yeniIsimler[i]} - ${yeniNumaralar[i]} nosuna sahip.`)
+function fonk2() {
+  console.log("fonksiyon 2 başladı");
+  fonk1()
+  console.log("fonksiyon 2 bitti")
 }
 */
 
-/**
- * Bir dizenin ilk ve son sözcükleri hariç tüm sözcüklerini konsola yazdıran bir kod yazın. 
- * Ortaya çıkan dize bir boşluk karakteriyle başlamamalı veya bitmemelidir.
- * Komut dosyası herhangi bir dize için çalışmalıdır.
- */
 
-/* const string = "Welcome to the future asas";
+// scope 
 
-const yeniDizi = string.split(" ");
+/*const altMudur = "aziz";
 
-console.log(yeniDizi.slice(1, -1).join(" ")) */
-
-
-/**
- * Bir dizideki en küçük sayıyı bulmak için bir kod yazın. 
- * Kod herhangi bir sayı dizisi için çalışmalıdır. Problemi çözmek için bir döngü kullanın.
- */
-
-/* const values = [20, 17, 94, 3, 23, 37];
-let min = values[0];
-
-for (let val of values) {
-  if (val < min) {
-    min = val;
+  {
+    const altMudur = "asdasd";
+    console.log(altMudur)
   }
+*/
+
+
+/**
+ * Herhangi bir sayıda argüman alan ve bunların ortalama değerini 
+ * döndüren bir calAverage() fonksiyonu yazın. 
+ * Tüm argümanlar sadece sayı olacaktır.
+ */
+/*function calAverage() {
+
+  const sayilar = Array.from(arguments);
+  let toplam = 0;
+
+  for(let sayi of sayilar) {
+    toplam += sayi
+  }
+
+  return toplam / sayilar.length;
+
 }
 
-console.log(min); */
+console.log(calAverage(1, 2, 3, 4)); // 2.5
+console.log(calAverage(14, 8, 2)); // 8
+console.log(calAverage(27, 43, 2, 8, 36)); // 23.2 */
 
+
+/*function formatTime(totalMinutes) {
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+
+  const doubleDigitHours = String(hours).padStart(2, 0);
+  const doubleDigitMinutes = String(minutes).padStart(2, 0);
+  return (`${doubleDigitHours}:${doubleDigitMinutes}`);
+}
+
+console.log(formatTime(70)); // "01:10"
+console.log(formatTime(450)); // "07:30"
+console.log(formatTime(1441)); // "24:01" */
+
+console.log("1123".padStart(11, 1))
