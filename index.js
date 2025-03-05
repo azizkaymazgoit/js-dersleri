@@ -1,144 +1,45 @@
+// Nesneler - Object
+// key - value
 
 
-
-/* function deneme() {
-
-  // sözde dizi - arguments
-  // console.log(arguments)
-
-  const data = Array.from(arguments)
-
-  console.log(arguments)
-  console.log("----------------------")
-  console.log(data)
-
-  /* for(let aasdasdrf of data) {
-    console.log(aasdasdrf)
-  } 
-
-} */
-
-/* deneme("Aziz", "Kaymaz", 30, 123123, "asdasd", 123132, "asdasdasdasd") */
-
-
-/* function topla() {
-
-  const sayilar = Array.from(arguments);
-  let toplam = 0;
-
-  for(let sayi of sayilar) {
-    toplam *= sayi
-  }
-
-  return toplam;
- 
+const kullanici = {
+  ad: "Aziz",
+  soyad: "Kaymaz",
+  color: "red",
+  full_name: "Aziz Kaymaz",
+  diller: ["html", "css"],
+  adres: {
+    ilce: "maltepe",
+    il: "istanbul"
+  },
+  yas: 33,
+  isAdmin: true,
 }
 
-console.log(topla(1,2,3,4,5,6,7)) */
+// const anahtarlar = Object.values(kullanici)
 
-
-/*function enUzunKelime() {
-
-  const data = Array.from(arguments);
-  let ilkKelime = data[0];
-
-  for(let eleman of data) {
-    if(eleman.length > ilkKelime.length) {
-      ilkKelime = eleman
-    }
-  }
-
-  return ilkKelime
-
+const sayilar = {
+  sayi1: 100
 }
 
-console.log(enUzunKelime("aaa", "bbbbbb", "ccc", "asjagsdljkagsld")) */
+let toplam = 0;
 
-
-// default parametre değeri
-/* function deneme(isim = "kullanıcı") {
-  console.log("Merhaba " + isim)
+for(const sayi in sayilar) {
+  toplam += sayilar[sayi]
 }
 
-deneme("aziz"); */
+console.log(toplam)
 
-
-// hoisting
-
-
-/* deneme()
-
-function deneme() {
-  console.log("merhaba")
-} */
-
-
-/* const benimFonksiyonum = function() {
-  console.log("merhaba 2")
-}
-
-benimFonksiyonum() */
-
-/*const isim = "aziz";
-
-function fonk1() {
-  fonk1()
-  console.log("fonksiyon 1 başladı");
-}
-
-function fonk2() {
-  console.log("fonksiyon 2 başladı");
-  fonk1()
-  console.log("fonksiyon 2 bitti")
-}
-*/
-
-
-// scope 
-
-/*const altMudur = "aziz";
-
-  {
-    const altMudur = "asdasd";
-    console.log(altMudur)
-  }
-*/
 
 
 /**
- * Herhangi bir sayıda argüman alan ve bunların ortalama değerini 
- * döndüren bir calAverage() fonksiyonu yazın. 
- * Tüm argümanlar sadece sayı olacaktır.
+ * Ekibimizin maaşlarının saklandığı bir merkezimiz var. Tüm maaşları toplamak ve 
+ * sonucu sum değişkenine kaydetmek için bir kod yazın.
+ * Sonuç 390 olmalıdır. salaries nesnesi boşsa, sonuç 0 olmalıdır.
  */
-/*function calAverage() {
+const salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+};
 
-  const sayilar = Array.from(arguments);
-  let toplam = 0;
-
-  for(let sayi of sayilar) {
-    toplam += sayi
-  }
-
-  return toplam / sayilar.length;
-
-}
-
-console.log(calAverage(1, 2, 3, 4)); // 2.5
-console.log(calAverage(14, 8, 2)); // 8
-console.log(calAverage(27, 43, 2, 8, 36)); // 23.2 */
-
-
-/*function formatTime(totalMinutes) {
-  const hours = Math.floor(totalMinutes / 60);
-  const minutes = totalMinutes % 60;
-
-  const doubleDigitHours = String(hours).padStart(2, 0);
-  const doubleDigitMinutes = String(minutes).padStart(2, 0);
-  return (`${doubleDigitHours}:${doubleDigitMinutes}`);
-}
-
-console.log(formatTime(70)); // "01:10"
-console.log(formatTime(450)); // "07:30"
-console.log(formatTime(1441)); // "24:01" */
-
-console.log("1123".padStart(11, 1))
