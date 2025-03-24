@@ -258,7 +258,7 @@ console.log("sirali: ",siraliDizim) */
 
 
 
-const arabalar = [
+/* const arabalar = [
   {
       make: 'Honda',
       model: 'CR-V',
@@ -381,7 +381,226 @@ buttonum.addEventListener('click', () => {
     }
   })
   ekranaBas(fordArabalar)
-});
+}); */
 
 
 // en son yeni listeyi ekrana basmam gerekiyor
+
+
+// use strict
+
+
+/* "use strict"
+
+const isim = "aziz";
+console.log(isim) */
+
+
+
+// this
+
+// "use strict"
+
+// console.log(this)
+
+/* function deneme() {
+  console.log("func-->", this);
+}
+
+deneme(); */
+
+
+/* const kisi = {
+  isim: "Aziz",
+  soyisim: "Kaymaz",
+  isimBul() {
+    console.log("this---> ", this)
+  }
+} */
+
+
+/* function foo() {
+  console.log('foo -> this', this);
+}
+foo(); */
+
+/* const user = {
+  tag: 'Mango',
+  showTag() {
+    console.log('showTag -> this', this);
+  }
+};
+
+user.showTag(); */
+
+/* function showTag() {
+  console.log('showTag -> this', this);
+  console.log('showTag -> this.tag', this.tag);
+}
+
+
+// this = global = window
+showTag();
+
+
+const mango = {
+  tag: 'Mango' 
+};
+
+
+mango.showUserTag = showTag;
+
+// this = obje
+mango.showUserTag(); */
+
+
+/* const poly = {
+  tag: 'Poly',
+  showTag() {
+    console.log('showTag -> this', this);
+    console.log('showTag -> this.tag', this.tag);
+  }
+};
+
+console.log("1.adım")
+poly.showTag();
+
+
+// const outerShowTag = poly.showTag;
+
+function outerShowTag() {
+  console.log('showTag -> this', this);
+   console.log('showTag -> this.tag', this.tag);
+}
+
+console.log("2.adım")
+outerShowTag(); */
+
+/* const book = {
+  title: 'React for beginners',
+  showThis() {
+    console.log('showThis -> this', this);
+  },
+  showTitle() {
+    console.log('showTitle -> this.title', this.title);
+  }
+};
+
+book.showTitle();
+
+const outerShowThis = book.showThis;
+
+function showThis() {
+  console.log('showThis -> this', this);
+}
+outerShowThis();
+
+const outerShowTitle = book.showTitle;
+outerShowTitle(); */
+
+/* function deneme(par1, par2) {
+  console.log("par1: ",par1)
+  console.log("par2: ",par2)
+  console.log("func this---> ", this)
+}
+
+const kisi = {
+  isim: "Aziz",
+  soyisim: "Kaymaz"
+}
+
+
+// call - apply - bind
+// tam olarak bu noktada this artık kisi objesini temsil edecek
+//deneme.call(kisi)
+// deneme.call(kisi);
+deneme.call(kisi, "aziz", "devam")
+deneme.apply(kisi, ["aziz", "devam"])
+
+const yenifunc = deneme.bind(kisi)
+yenifunc("par111", "par222"); */
+
+
+// "use strict"
+
+/* function normalFunc() {
+  console.log("normal--> ", this)
+}
+normalFunc(); */
+
+
+/* const arrowFunc = () => {
+  console.log("arrow--> ", this)
+}
+
+const kisi = {
+  isim: "Aziz",
+  soyisim: "Kaymaz"
+}
+
+arrowFunc.call(kisi) */
+
+/*const changeColor = function (color) {
+  this.color = color;
+  console.log('changeColor -> this', this);
+};
+
+
+const hat = {
+  color: 'black'
+};
+
+changeColor.call(hat, 'orange');
+console.log(hat);
+const sweater = { color: 'green' };
+changeColor.apply(sweater, ['blue']);
+console.log(sweater);
+*/
+
+
+// Prototipler
+
+/* const canlilar = {
+  hayat: "oksijen"
+}
+
+const insan = Object.create(canlilar)
+insan.bacak = 2;
+insan.kol = 2;
+
+const kisi = Object.create(insan);
+kisi.adi = "Aziz";
+kisi.yas = 30;
+
+
+console.log(kisi.deneme)
+console.log(kisi)
+
+// isPrototypeOf
+console.log(insan.isPrototypeOf(kisi))
+
+// hasOwnProperty
+console.log(insan.hasOwnProperty("bacak")) */
+
+
+/* const objC = { c: 'objC prop' };
+const objB = Object.create(objC);
+objB.b = 'objB prop';
+const objA = Object.create(objB);
+objA.a = 'objA prop';
+
+
+
+console.log("objA",objA);
+
+console.log(objB);
+console.log(objC);
+
+console.log(objA.hasOwnProperty('a'));
+console.log(objA.a);
+console.log(objA.hasOwnProperty('b'));
+console.log(objA.b);
+console.log(objA.hasOwnProperty('c'));
+console.log(objA.c);
+console.log(objA.hasOwnProperty('x'));
+console.log(objA.x); */
