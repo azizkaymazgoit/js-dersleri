@@ -604,3 +604,139 @@ console.log(objA.hasOwnProperty('c'));
 console.log(objA.c);
 console.log(objA.hasOwnProperty('x'));
 console.log(objA.x); */
+
+// class
+
+const kisi1 = {
+  name: "Aziz",
+  lastname: "Kaymaz"
+}
+
+const kisi2 = {
+  name: "Aziz",
+  lastname: "Kaymaz"
+}
+
+// console.log(kisi1)
+// console.log(kisi2)
+
+
+// şablon - arayüz
+// instance
+// contructor - objeyi create ederken ne yapayım ?
+// get - set
+// get - bir dataya erişip onun çıktısını alıyoruz
+// set - objem içerisindeki bir datayı revize ediyoruz - müdahale ediyoruz
+// field
+// private
+// static
+// inheritance
+
+
+// const {isim, soyisim, yas} = gelenData2;
+
+// console.log(isim);
+// console.log(soyisim);
+// console.log(yas);
+
+/* let globalId = 1;
+
+class User {
+
+  static aciklama = "Merhaba bu User Class'ına ait."
+  
+  #id;
+  isim;
+  soyisim;
+  yas; 
+  
+
+  constructor({ad, soyisim, yas}) {
+    this.#id = globalId++;
+    this.isim = ad
+    this.soyisim = soyisim
+    this.yas = yas
+  }
+
+  kullaniciyiYazdir() {
+    return `Merhaba, ${this.#id} ${this.isim} ${this.soyisim} hoşgeldin..`;
+  }
+
+}
+
+
+const gelenData1 = {
+  yas: 30,
+  ad: "Aziz",
+  soyisim: "Kaymaz"
+}
+
+const kullanici1 = new User(gelenData1);
+console.log(kullanici1)
+console.log(kullanici1.kullaniciyiYazdir())
+
+const kullanici2 = new User(gelenData1);
+console.log(kullanici2.kullaniciyiYazdir())
+
+console.log(User.aciklama)
+console.log(Math.PI) */
+
+// user (username, password, email)
+
+/* class User {
+  username;
+  password;
+
+  constructor(username, password) {
+    this.username = username;
+    this.password = password
+  }
+
+}
+
+class NormalKullanici extends User {
+
+}
+
+class Admin extends User {
+  title;
+
+  constructor(username, password) {
+    super(username, password);
+    this.title = "Admin"
+  }
+
+}
+
+const kullanici = new Admin("azizkaymaz", "1234");
+console.log(kullanici); */
+
+
+class Blogger {
+  constructor({ email, age, numberOfPosts, topics }) {
+    this.email = email;
+    this.age = age;
+    this.numberOfPosts = numberOfPosts;
+    this.topics = topics;
+  }
+
+  getInfo() {
+    return `User ${this.email} is ${this.age} years old and has ${this.numberOfPosts} posts`;
+  }
+
+  updatePostCount(value) {
+    this.numberOfPosts += value;
+  }
+}
+
+const poly = new Blogger({
+  email: 'poly@mail.com',
+  age: 19,
+  numberOfPosts: 17,
+  topics: ['sports', 'gaming', 'health']
+});
+
+console.log(poly.getInfo());
+
+poly.updatePostCount(4);
+console.log(poly.getInfo());
